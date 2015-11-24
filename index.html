@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Agendinha</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+    content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="lib/Bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/jQuery/jquery.ui.min.css" />
+    <link rel="stylesheet" href="assets/todo.css" />
+</head>
+
+<body class="well">
+    <div data-role="page">
+     
+     <div data-role="content">
+        <div class="task-list">            
+            <h3>Tarefas</h3>
+            <form id="todo-form">
+                <input type="text" placeholder="Title" />
+                <textarea placeholder="Descrição"></textarea>
+                <input type="text" id="datepicker" placeholder="Data" />
+                <input type="button" class="btn btn-primary" value="Adicionar" onclick="todo.add();" />
+            </form>
+
+            <input type="button" class="btn btn-primary" value="Limpar" onclick="todo.clear();" />
+
+
+            <div id="delete-div">
+                Drag Here to Delete
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="task-list task-container" id="pending">
+            <h3>Atividades</h3>
+                <!--<div class="todo-task">
+                    <div class="task-header">Sample Header</div>
+                    <div class="task-date">25/06/1992</div>
+                    <div class="task-description">Lorem Ipsum Dolor Sit Amet</div>
+                </div>-->
+            </div>        
+
+            <div style="clear:both;"></div>
+            <script type="text/javascript" src="lib/jQuery/jquery.min.js"></script>
+            <script type="text/javascript" src="lib/Bootstrap/bootstrap.min.js"></script>
+            <script type="text/javascript" src="lib/jQuery/jquery.ui.min.js"></script>
+            <script type="text/javascript" src="assets/todo.js"></script>
+
+            <script type="text/javascript">
+            $( "#datepicker" ).datepicker();
+            $( "#datepicker" ).datepicker("option", "dateFormat", "dd/mm/yy");
+
+            $(".task-container").droppable();
+            $(".todo-task").draggable({ revert: "valid", revertDuration:200 });
+            todo.init();
+            </script>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="br.com.erlan.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Agendinha TCC</name>
+    <description>
+        Exemplo Storage - TCC Erlan 
+    </description>
+    <author email="erlan.ara@gmail.com" href="http://erlan.com.br">
+        EAS Team
+    </author>
+    <access origin="*"/>
+
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="default" />
+    <preference name="fullscreen" value="false" />
+    <preference name="android-minSdkVersion" value="7" />
+    <preference name="android-installLocation" value="auto" />
+    
+
+</widget>
